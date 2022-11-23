@@ -1,0 +1,20 @@
+<div class="weapon-list-container">
+    <mat-grid-list cols="4" gutter-size="2" rowHeight="500">
+        <mat-grid-tile *ngFor="let weapon of weaponList">
+        <mat-card class="weapon-card">
+            <mat-card-header>
+              <mat-card-title>{{weapon.name}}</mat-card-title>
+              <mat-card-subtitle>{{weapon.category}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="weapon.image" alt="Photo of weapon" class="card-image">
+            <mat-card-content>
+              <p>{{weapon.description | slice:0:300}}{{weapon.description.length >300? '...':''}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="primary">Details</button>
+              <button mat-button color="primary">Bearbeiten</button>
+            </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -4,6 +4,8 @@ import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { RouteModel } from '../model/route-model';
 import { Weapon } from '../model/weapon';
+import Weapons from './weapons.json';
+
 
 @Injectable({
   providedIn: 'root'
@@ -26,14 +28,17 @@ export class RestClientService {
   }
 
   
-  public getWeapons(): Observable<Weapon[]>
+  public getWeapons(): Weapon[] //Observable<Weapon[]>
   {
+    return Weapons;
+    /*
     return this.http
     .get<Weapon[]>(`${this.API}/weapon/weapons`)
     .pipe(
       retry(1), 
       catchError(this.handleError)
       );
+      */
   }
 
   // Error handling

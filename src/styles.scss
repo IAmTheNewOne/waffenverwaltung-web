@@ -1,4 +1,19 @@
 @use '@angular/material' as mat;
+@import '~@angular/material/theming';
+
+@include mat-core();
+$lzpd-primary: mat.define-palette(mat.$indigo-palette, 500);
+
+$lzpd-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$myapp-web-theme: mat-define-light-theme((
+  color: (
+    primary: $lzpd-primary,
+    accent: $lzpd-accent
+  )
+));
+
+@include mat.all-component-themes($myapp-web-theme);
 
 html,
 body {

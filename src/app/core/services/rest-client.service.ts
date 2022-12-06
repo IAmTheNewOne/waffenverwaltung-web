@@ -18,7 +18,7 @@ export class RestClientService {
   public getNavigationRoutes(): Observable<RouteModel[]>
   {
     return this.http
-    .get<RouteModel[]>(`${this.API}/homepage/navigation`)
+    .get<RouteModel[]>(`${this.API}/navigation/navigation`)
     .pipe(
       retry(1), 
       catchError(this.handleError)
@@ -27,7 +27,7 @@ export class RestClientService {
 
   
   public getWeapons(): Observable<Weapon[]>
-  {
+  {  
     return this.http
     .get<Weapon[]>(`${this.API}/weapon/weapons`)
     .pipe(

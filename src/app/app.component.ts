@@ -12,6 +12,10 @@ export class AppComponent {
 
   constructor(private restClient: RestClientService)
   {
+    this.getNavigationRoutes();
+  }
+
+  private getNavigationRoutes() {
     this.restClient.getNavigationRoutes()
     .subscribe(data => this.routeList=data);
   }

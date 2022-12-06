@@ -1,10 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row class="nav-row">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    <div class="prefix-container">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
       (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
     <span>PP Münster - Waffenverwaltung</span>
+    </div>
+    <button mat-raised-button color="accent" routerLink="registration" class="register-nav-button"><mat-icon fontIcon="group_add"></mat-icon>
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
 

@@ -4,8 +4,6 @@ import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
 import { RouteModel } from '../model/route-model';
 import { Weapon } from '../model/weapon';
-import Weapons from './weapons.json';
-
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +18,7 @@ export class RestClientService {
   public getNavigationRoutes(): Observable<RouteModel[]>
   {
     return this.http
-    .get<RouteModel[]>(`${this.API}/homepage/navigation`)
+    .get<RouteModel[]>(`${this.API}/navigation/navigation`)
     .pipe(
       retry(1), 
       catchError(this.handleError)
@@ -28,17 +26,14 @@ export class RestClientService {
   }
 
   
-  public getWeapons(): Weapon[] //Observable<Weapon[]>
-  {
-    return Weapons;
-    /*
+  public getWeapons(): Observable<Weapon[]>
+  {  
     return this.http
     .get<Weapon[]>(`${this.API}/weapon/weapons`)
     .pipe(
       retry(1), 
       catchError(this.handleError)
       );
-      */
   }
 
   // Error handling

@@ -1,0 +1,24 @@
+.register-card {
+
+    width: 50%;
+    min-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    .email-form-field, .pw-form-field {
+        width: 100%;
+    }
+
+    .button-container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .register-button {
+        width: 50%
+    }
+
+    .abort-button {
+        margin-left: 10%;
+        width: 25%;
+    }
+}

@@ -1,5 +1,7 @@
 .nav-row {
-    > * {
+    display: flex;
+    justify-content: space-between;
+    .prefix-container * {
         margin-left: 0.5em;
         margin-right: 0.5em;
     }

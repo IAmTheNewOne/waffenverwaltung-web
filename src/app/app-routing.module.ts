@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './feature/view/homepage/homepage.component';
+import { RegistrationComponent } from './feature/view/registration/registration.component';
 import { WeaponListComponent } from './feature/view/weapon-list/weapon-list.component';
 
 const routes: Routes = [
-  {redirectTo:"homepage", path:"", pathMatch:"full"},
-  {component: HomepageComponent, path:"homepage"},
-  {component: WeaponListComponent, path:"weapon-list"}
+  { redirectTo:"homepage", path:"", pathMatch:"full" },
+  { component: HomepageComponent, path:"homepage" },
+  { component: WeaponListComponent, path:"weapon-list" },
+  { component: RegistrationComponent, path:"registration" }
 ];
 
 @NgModule({

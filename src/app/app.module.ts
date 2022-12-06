@@ -19,7 +19,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 import { WeaponListComponent } from './feature/view/weapon-list/weapon-list.component';
 import { HomepageComponent } from './feature/view/homepage/homepage.component';
-import { LoginComponent } from './feature/view/login/login.component';
+import { RegistrationComponent } from './feature/view/registration/registration.component';
 
 const matModules = [MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatInputModule, MatFormFieldModule, MatDatepickerModule, MatCardModule, MatGridListModule];
 
@@ -28,7 +28,7 @@ const matModules = [MatButtonModule, MatToolbarModule, MatSidenavModule, MatIcon
     AppComponent,
     WeaponListComponent,
     HomepageComponent,
-    LoginComponent
+    RegistrationComponent
 ],
   imports: [
     BrowserModule,

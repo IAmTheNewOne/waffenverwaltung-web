@@ -49,7 +49,7 @@ export class RestClientService {
   
   public registerUser(registrationForm: FormGroup<RegistrationForm>): Observable<User> {
     return this.http
-    .post<User>(`${this.API}/user/registration`, registrationForm.value)
+    .post<User>(`${this.API}/user/add-user`, registrationForm.value)
     .pipe(
       retry(1), 
       catchError(this.handleError)

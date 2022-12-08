@@ -1,22 +1,24 @@
 <div class="example-container">
   <mat-card class="register-card">
+    <mat-card-title>Registration</mat-card-title>
+    <form (ngSubmit)="submitRegistration()" [formGroup]="registrationForm"> 
     <mat-form-field appearance="outline" floatLabel="always" class="email-form-field">
         <mat-label>Enter your email</mat-label>
-        <input matInput type="email" class="example-right-align">
+        <input matInput type="email" class="example-right-align" name="email" id="email" formControlName="email">
       </mat-form-field>
   
       <mat-form-field appearance="outline" class="pw-form-field">
           <mat-label>Enter your password</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
+          <input matInput [type]="hide ? 'password' : 'text'" name="password" id="password" formControlName="password">
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field>
 
         <div class="button-container">
-            <button mat-raised-button color="primary" type="button" class="register-button">Register!</button>
-            <button mat-raised-button color="accent" type="button" class="abort-button">Abort</button>
+            <button mat-raised-button color="primary" type="submit" class="register-button">Register!</button>
+            <button mat-raised-button color="accent" type="button" class="abort-button" (click)="abortRegistration()">Abort</button>
         </div>
-
+      </form>
   </mat-card>
   </div>

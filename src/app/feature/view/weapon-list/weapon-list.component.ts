@@ -12,11 +12,14 @@ export class WeaponListComponent implements OnInit {
   weaponList: Array<Weapon> = [];
 
   constructor(private restClient: RestClientService) { 
-    this.restClient.getWeapons().subscribe(data => {this.weaponList = data});
+    this.restClient.getWeapons()
+    .subscribe(
+      data => {
+        this.weaponList = data
+      });
   }
 
   ngOnInit(): void {
   }
-
 }
 

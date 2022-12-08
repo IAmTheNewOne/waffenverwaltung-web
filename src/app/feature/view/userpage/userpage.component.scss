@@ -1,0 +1,44 @@
+.cell {
+    min-width: 500px;
+}
+
+.table-container {
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.table-sub-container {
+        width: 100%;
+
+    .user-table {
+        width: 100%;
+    }
+}
+
+.button-container {
+    position: relative;
+    right: -90%;
+}
+
+.register-card {
+    margin-top: 5vh;
+    
+    .email-form-field, .pw-form-field {
+        width: 100%;
+    }
+
+    .button-container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .register-button {
+        width: 50%
+    }
+
+    .abort-button {
+        margin-left: 15%;
+        width: 25%;
+    }
+}
